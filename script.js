@@ -7,6 +7,9 @@ randomly returns one rock, paper, or scissors
 let computerScore = 0;
 let humanScore = 0;
 
+let cpuChoice = getComputerChoice();
+let humChoice = getHumanChoice();
+
 function getComputerChoice() {
     let randy = Math.random();
     let choice;
@@ -31,7 +34,25 @@ function playRound(computerChoice, humanChoice){
 
     if (computerChoice === humanChoice) {
         console.log("It's a tie!");
+    } else if (computerChoice === "rock" && humanChoice === "paper") {
+        console.log("Human wins!");
+        humanScore++;
+    } else if (computerChoice === "paper" && humanChoice === "scissors") {
+        console.log("Human wins!");
+        humanScore++;
+    } else if (computerChoice === "scissors" && humanChoice === "rock") {
+        console.log("Human wins!");
+        humanScore++;
+    } else if (computerChoice === "rock" && humanChoice === "scissors") {
+        console.log("Computer wins!");
+        computerScore++;
+    } else if (computerChoice === "paper" && humanChoice === "rock") {
+        console.log("Computer wins!");
+        computerScore++;
+    } else if (computerChoice === "scissors" && humanChoice === "paper") {
+        console.log("Computer wins!");
+        computerScore++;
     }
 }
-console.log("Computer chooses "+getComputerChoice()+"!");
-console.log("Human chooses "+getHumanChoice()+"!");
+
+
