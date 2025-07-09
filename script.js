@@ -1,14 +1,5 @@
-/*
-randomly returns one rock, paper, or scissors
-    if Math.random <= .33 return rock
-    else if Math.random > .33 && Math.random <= .66 return paper 
-    else return scissors 
-*/
 let computerScore = 0;
 let humanScore = 0;
-
-let cpuChoice = getComputerChoice();
-let humChoice = getHumanChoice();
 
 function getComputerChoice() {
     let randy = Math.random();
