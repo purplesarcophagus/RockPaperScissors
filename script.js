@@ -55,4 +55,15 @@ function playRound(computerChoice, humanChoice){
     }
 }
 
+function playGame() {
+    for (let i=0;i<4;i++){
+        playRound(getComputerChoice(), getHumanChoice());
+    }
+    if (computerScore > humanScore){
+        console.log("YOU LOSE SILLY HUMAN!!!");
+    } else {
+        console.log("As you should human, good job.");
+    }
+}
 
+playGame();
