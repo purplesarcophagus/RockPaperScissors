@@ -6,11 +6,21 @@ randomly returns one rock, paper, or scissors
 */
 function getComputerChoice() {
     let randy = Math.random();
+    let choice;
     if (randy <= .33) {
-        return "Rock";
+        choice = "Rock";
     } else if (randy > .33 && randy <= .66) {
-        return "Paper";
+        choice = "Paper";
     } else {
-        return "Scissors";
+        choice = "Scissors";
     }
+    return choice;
 }
+
+function getHumanChoice() {
+    let choice = prompt("What is your choice Human? ");
+    return choice;
+}
+
+console.log("Computer chooses "+getComputerChoice()+"!");
+console.log("Human chooses "+getHumanChoice()+"!");
