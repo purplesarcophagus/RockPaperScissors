@@ -25,5 +25,13 @@ function getHumanChoice() {
     return choice;
 }
 
+function playRound(computerChoice, humanChoice){
+    computerChoice = computerChoice.toLowerCase();
+    humanChoice = humanChoice.toLowerCase();
+
+    if (computerChoice === humanChoice) {
+        console.log("It's a tie!");
+    }
+}
 console.log("Computer chooses "+getComputerChoice()+"!");
 console.log("Human chooses "+getHumanChoice()+"!");
